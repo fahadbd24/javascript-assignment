@@ -19,32 +19,33 @@ var wood = woodCalculator(12,1,4);
 // console.log("The cubic feet of wood is " , wood);
 
 // brickCalculator
-var floorTen = 15000;
-var floorTwenty = 12000;
-var floorTwentyPlus = 10000;
 
 function brickCalculator(floor){ 
+    var numOfBricks = 0; 
+    for (var i = 1; i <= floor; i++) {
+    if (i <= 10) {
+    numOfBricks = numOfBricks + 1500;
+    
+} else if (i <= 20 && i > 10 ) {
+    numOfBricks = numOfBricks + 1200;
+    
+} else 
+    numOfBricks = numOfBricks + 1000;
 
-for (var i = 0; i <= 100; i++) {
-if (floor <= 10) {
-    return floorTen*floor;
-    
-} else if (floor <= 20) {
-    return floorTwenty*floor;
-    
-} else ( floor > 20) 
-    return floorTwentyPlus*floor;
+}
+    return numOfBricks;
 }
 
-}
 
+var neededBricks = brickCalculator (21);
+console.log("The number of bricks you need is",  neededBricks);
 
-var neededBricks = brickCalculator (11);
-// console.log("The number of bricks you need is",  neededBricks);
+    
+
 
     
 
 // tinyFriend
 const tinyFriend = [2391, 88, 23, 53, 86, 99, 4002, 1267, 142, 564]
 const min = Math.min(...tinyFriend)
-console.log("The lowest value of array is" ,min)
+// console.log("The lowest value of array is" ,min)
